@@ -75,28 +75,28 @@ const List = () => {
     console.log(id, isChecked);
   };
 
-  function findCommonElement(array1, array2) {
-    // Loop for array1
-    for (let i = 0; i < array1.length; i++) {
-      // Loop for array2
-      for (let j = 0; j < array2.length; j++) {
-        // Compare the element of each and
-        // every element from both of the
-        // arrays
-        if (array1[i].id === array2[j].id) {
-          // Return if common element found
-          return true;
-        }
-      }
-    }
+  // function findCommonElement(array1, array2) {
+  //   // Loop for array1
+  //   for (let i = 0; i < array1.length; i++) {
+  //     // Loop for array2
+  //     for (let j = 0; j < array2.length; j++) {
+  //       // Compare the element of each and
+  //       // every element from both of the
+  //       // arrays
+  //       if (array1[i].id === array2[j].id) {
+  //         // Return if common element found
+  //         return true;
+  //       }
+  //     }
+  //   }
 
-    // Return if no common element exist
-    return false;
-  }
+  //   // Return if no common element exist
+  //   return false;
+  // }
 
   //   Delete selected Rows
-  const deleteSelectedItems = (id) => {
-    var intersect = findCommonElement(userData, isChecked);
+  const deleteSelectedItems = () => {
+    // var intersect = findCommonElement(userData, isChecked);
     // console.log("common", intersect);
     // let data = [...userData]
     // userData.forEach((i)=>{
@@ -105,25 +105,25 @@ const List = () => {
     // console.log(userData);
 
 
-    let data = [...isChecked];
-    userData.forEach((i) => {
-      data = data.filter((j) => j.id !== i.id);
-    });
-    const newuserData = isChecked;
+    // let data = [...isChecked];
+    // userData.forEach((i) => {
+    //   data = data.filter((j) => j.id !== i.id);
+    // });
+    // const newuserData = isChecked;
 
 
-    for (let i = 0; i < userData.length; i++) {
-      for (let j = 0; j < isChecked.length; j++) {
-        if (userData[i].id === isChecked[j].id) {
+    // for (let i = 0; i < userData.length; i++) {
+    //   for (let j = 0; j < isChecked.length; j++) {
+    //     if (userData[i].id === isChecked[j].id) {
            
-          //  setUserData(test)
+    //       //  setUserData(test)
           
-           return setUserData(userData.splice(i, 1))
-        }
-        console.log(userData);
+    //         userData.splice(i, 1)
+    //     }
+    //     console.log(userData);
       
-      }
-    }
+    //   }
+    // }
 
     // const deleted_users = userData.filter((i)=> i.id ?'true':'false')
     // console.log("del users",deleted_users);
